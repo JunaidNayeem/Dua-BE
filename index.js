@@ -8,7 +8,7 @@ const duaRouter = require("./routes/duas");
 // Use cors middleware to enable CORS
 app.use(
   cors({
-    origin: "https://dua.vercel.app",
+    origin: "https://dua-e-kabba.vercel.app",
   })
 );
 
