@@ -8,7 +8,7 @@ const duaRouter = require("./routes/duas");
 // Use cors middleware to enable CORS
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://dua.vercel.app",
   })
 );
 
