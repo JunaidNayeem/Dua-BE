@@ -26,4 +26,15 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.delete("/:id", async (req, res) => {
+  try {
+    const duaId = req.params.id;
+    await Dua.findByIdAndRemove(duaId);
+    res.status(200).json({ message: "Dua marked as read successfully" });
+  } catch (error) {
+    console.error("Error marking dua as read:", error);
+    res.status(500).json({ error: "Failed to mark dua as read" });
+  }
+});
+
 module.exports = router;
